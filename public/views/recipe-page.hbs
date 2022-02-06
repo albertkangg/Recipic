@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recipic - Results</title>
+        <link rel="shortcut icon" type="image/png" sizes="32x32" href="/img/recipic favicon (1).svg">
+    </head>
+
+    <link rel="stylesheet" href="css/grid.css" />
+    <div class="header">
+        <div>
+            <a style = "position:absolute; top:-15px;right: 0px;" href="./logout"><h1 style = "margin-top:20px;margin-right:20px">Log Out</h1></a>
+            <a href="./"><h1 style = "margin-top:20px;margin-left:20px">Recipic</h1></a>
+        </div>
+        <img class = "logo" src="/img/recipic_logo__1_-removebg-preview.png" style="margin-left:1%;z-index:3;vertical-align:center;margin-top:0.5%">
+    </div>
+    <br><br><br><br>
+    <h1 style = "color:rgb(0, 0, 0); font-weight: normal"></h1><br><br>
+    <body>
+        <br>
+        <section class="cards">
+            {{!-- <article class="card"> --}}
+                
+                {{#each recipes}}
+                    <ul class="card">
+                        <h1><a style="font-size:30px" href={{this.recipe.shareAs}}>{{this.recipe.label}}</a></h1>
+                        <p><b>From: </b> {{this.recipe.source}}</p>
+                        <img src = {{this.recipe.image}}>
+                        <br><br><br>
+                    </ul>    
+                {{/each}}
+                           
+            {{!-- </article> --}}
+        </article>
+        {{!-- <ul class="recipe-list">
+            {{#each recipes}}
+                <h3 id = "recipe-header"><a href={{this.recipe.uri}}>{{this.recipe.label}}</a></h3>
+                <li><b>from:</b> {{this.recipe.source}}</li>
+                <img src = {{this.recipe.image}}>
+                <br><br><br>
+            {{/each}}
+        </ul> --}}
+    </body>
+</html>
